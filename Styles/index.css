@@ -180,6 +180,7 @@ body {
 #main-content-bottom > ul > li {
     font-size: 22px;
     line-height: 28px;
+<<<<<<< HEAD
 }
 #footer {
     display: flex;
@@ -259,4 +260,6 @@ body {
 #crunched-designs img {
     width: 30px;
     margin-left: 10px;
+=======
+>>>>>>> a229d212298503cf8570ec20ca8607fb9731facc
 }
