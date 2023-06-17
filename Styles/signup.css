@@ -67,6 +67,14 @@
     /* border: 1px solid black; */
     width: 70%;
 }
+#google-auth > ul {
+    list-style: none;
+}
+#google-auth > ul > li {
+    font-size: 14px;
+    color: #ff0000;
+    margin-bottom: 5px;
+}
 #google-div {
     /* margin-top: 20px; */
     display: flex;
@@ -194,4 +202,15 @@
 #checkbox-div input:hover {
     cursor: pointer;    
     box-shadow: none
+}
+#checkbox-msg {
+    display: none;
+    color: #ee0505;
+    margin: 5px 0;
+}
+.error-img {
+    height: 20px;
+    width: 20px;
+    margin-left: 5px;
+    margin-bottom: -3px;
 }
