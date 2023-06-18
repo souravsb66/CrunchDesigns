@@ -21,6 +21,10 @@ if(logInStatus === "true") {
     profileDiv.style.display = "flex";
 }
 
+let crunchCount = Number(localStorage.getItem("crunch-count")) || 0;
+document.querySelector("#crunch-number").innerText = crunchCount;
+// localStorage.setItem("crunch-count", (crunchCount+1));
+
 profileDiv.addEventListener("mouseenter", () => {
     profileHover.style.visibility = "visible";
 })

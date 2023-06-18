@@ -148,7 +148,13 @@ body {
     transform: scale(0.95);
 }
 
-
+#main {
+    border: 1px solid black;
+    width: 80vw;
+    height: 70vh;
+    margin: auto;
+    margin-top: 50px;
+}
 
 
 #footer {
