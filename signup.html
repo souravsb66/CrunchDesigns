@@ -44,23 +44,26 @@
               <form id="signup-form">
                 <div>
                   <div>
-                    <label for="name-inp"><h4>Name</h4></label>
+                    <label for="name-inp" id="name-label"><h4>Name</h4></label>
                     <input type="text" name="" id="name-inp" />
                   </div>
                   <div>
-                    <label for="username-inp"><h4>Username</h4></label>
+                    <label for="username-inp" id="username-label"><h4>Username</h4></label>
                     <input type="text" name="" id="username-inp" />
                   </div>
                 </div>
-                <label for="email-inp"><h4>Email</h4></label>
+                <label for="email-inp" id="email-label"><h4>Email</h4></label>
                 <input type="email" name="" id="email-inp" />
-                <label for="pwd-inp"><h4>Password</h4></label>
+                <label for="pwd-inp" id="pwd-label"><h4>Password</h4></label>
                 <input
                   type="password"
                   id="pwd-inp"
                   placeholder="6+ characters"
                 />
 
+                <div id="checkbox-msg">
+                  <p>You must agree to the Terms of Service</p>
+                </div>
                 <div id="checkbox-div">
                   <input id="checkbox" type="checkbox" />
                   <label for="checkbox">
@@ -81,5 +84,6 @@
         </div>
       </div>
     </main>
+    <script src="./Scripts/signup.js"></script>
   </body>
 </html>
