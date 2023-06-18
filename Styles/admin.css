@@ -20,7 +20,9 @@ body {
     height: 50px;
     margin-left: 10px;
 }
-
+#admin-header {
+    display: none;
+}
 #nav-btn {
     /* border: 1px solid black; */
     width: 20%;
@@ -138,28 +140,56 @@ body {
 }
 #main {
     padding: 20px;
-    /* border: 1px solid black; */
-    width: 80vw;
-    /* height: 70vh; */
+    width: 90vw;
     margin: auto;
     margin-top: 50px;
     margin-bottom: 50px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    /* grid-template-rows: 1fr 4fr; */
-    grid-template-areas: 
-    "about about"
-    "options data"
-    ;
 }
-#main > div {
+#sortByName {
+    padding: 10px;
+    margin: 10px 10px 20px 2px;
+    background-color: #99d98c;
+    border: none;
+    outline: black;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#filterByType {
+    padding: 10px;
+    /* margin: 10px 10px 10px 2px; */
+    background-color: #99d98c;
+    border: none;
+    outline: black;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#userData-table {
+    width: 100%;
+    text-align: center;
+}
+#userData-table thead {
+    background-color: #ffba08;
+}
+#userData-table td {
     /* border: 1px solid black; */
-    padding: 20px;
+    padding: 10px;
+    /* border-radius: 5px; */
 }
-
+#userData-table > tbody > tr {
+    background-color: #415a77;
+    color: white;
+}
+.deleteBtn {
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+.deleteBtn:active {
+    transform: scale(0.95);
+}
 
 #footer {
     display: flex;

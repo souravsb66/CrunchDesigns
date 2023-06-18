@@ -45,26 +45,31 @@ submit.addEventListener("click", (e) => {
 
         localStorage.setItem("user-data", JSON.stringify(userData));
 
-        if(newData.type === "user") {
 
-            // console.log(newData)
-            // console.log(newData.type)
-            // console.log(typeof newData.type)
+        setTimeout(()=> {
+            window.location.replace("./index.html");
+        },500)
 
-            setTimeout(()=> {
-                window.location.replace("./index.html")
-            },500)
-        }
-        else if(newData.type === "admin") {
+        // if(newData.type === "user") {
 
-            // console.log(newData)
-            // console.log(newData.type)
-            // console.log(typeof newData.type)
+        //     // console.log(newData)
+        //     // console.log(newData.type)
+        //     // console.log(typeof newData.type)
 
-            setTimeout(()=> {
-                window.location.replace("./admin.html")
-            },500)
-        }
+        //     setTimeout(()=> {
+        //         window.location.replace("./index.html")
+        //     },500)
+        // }
+        // else if(newData.type === "admin") {
+
+        //     // console.log(newData)
+        //     // console.log(newData.type)
+        //     // console.log(typeof newData.type)
+
+        //     setTimeout(()=> {
+        //         window.location.replace("./admin.html")
+        //     },500)
+        // }
 
     }
     else {

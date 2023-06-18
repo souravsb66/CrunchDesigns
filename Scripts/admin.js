@@ -8,18 +8,20 @@ let navBtn = document.querySelector("#nav-btn");
 let profileDiv = document.querySelector("#profile-div");
 let profileHover = document.querySelector("#profile-hover-div");
 
+let tbody = document.querySelector("tbody");
+
 let signoutBtn = document.querySelector("#signout-btn");
 
 let currentUser;
 let currentUserIndex;
 
-let main = document.querySelector("main");
 let loginMsg = document.querySelector("#login-msg-div");
 
 if(logInStatus === "true") {
     navBtn.style.display = "none"
     profileDiv.style.display = "flex";
-    main.style.display = "grid";
+    document.querySelector("#admin-header").style.display = "block";
+
 
     currentUser = userData.filter((ele,i)=> {
         if(ele.loggedIn) {
@@ -40,9 +42,6 @@ else {
     main.style.display = "none";
 }
 
-let crunchCount = Number(localStorage.getItem("crunch-count")) || 0;
-document.querySelector("#crunch-number").innerText = crunchCount;
-// localStorage.setItem("crunch-count", (crunchCount+1));
 
 profileDiv.addEventListener("mouseenter", () => {
     profileHover.style.visibility = "visible";
@@ -54,109 +53,129 @@ profileHover.addEventListener("mouseleave", () => {
 signoutBtn.addEventListener("click", () => {
     
     localStorage.setItem("isLoggedIn", false);
-
+    
     let newData = userData[currentUserIndex];
     delete newData.loggedIn;
-
+    
     userData[currentUserIndex] = newData;
     localStorage.setItem("user-data", JSON.stringify(userData));
 
+    
     window.location.reload();
 })
 
-document.querySelector("#profile-header-name").innerText = currentUser[0].name;
-let option = document.querySelector("#profile-header-option");
-let optionMsg = document.querySelector("#option-msg");
+let crunchCount = Number(localStorage.getItem("crunch-count")) || 0;
+document.querySelector("#crunch-number").innerText = crunchCount;
+// localStorage.setItem("crunch-count", (crunchCount+1));
 
-let general = document.querySelector("#profile-link")
-let generalData = document.querySelector("#general-data");
 
-let usernameInp = document.querySelector("#username-inp");
-usernameInp.value = currentUser[0].username;
-let emailInp = document.querySelector("#email-inp");
-emailInp.value = currentUser[0].email;
 
-let generalSave = document.querySelector("#general-data > button");
-
-general.addEventListener("click", (e) => {
-
-    e.preventDefault();
-
-    generalData.style.display = "block";
-    general.style.fontWeight = "Bold";
-    general.style.color = "black";
-    editData.style.display = "none";
-    edit.style.fontWeight = "lighter";
-    edit.style.color = "#868686"
-    pwdData.style.display = "none";
-    pwd.style.fontWeight = "lighter";
-    pwd.style.color = "#868686";
-
-    option.innerText = "General";
-    optionMsg.innerText = "Update your username and manage your account"
-})
-
-generalSave.addEventListener("click", () => {
+//Sort users by names
+document.querySelector("#sortByName").addEventListener("change", (e) => {
     
-    let newData = userData;
-    
-    // console.log(newData)
+    let str = e.target.value;
+    let newData;
+    if(str === "") {
+        display(userData);
+    }
+    else if(str === "atoz") {
+        newData = userData.sort(sortByNames);
 
-    let username = usernameInp.value;
-    newData[0].username = username;
+        function sortByNames(a,b) {
+            if(a.name > b.name) {
+                return 1;
+            }
+            else {
+                return -1
+            }
+        }
+        display(newData)
+    }
 
-    let email = emailInp.value;
-    newData[0].email = email;
+    else if(str === "ztoa") {
+        newData = userData.sort(sortByNames);
+
+        function sortByNames(a,b) {
+            if(a.name > b.name) {
+                return -1;
+            }
+            else {
+                return 1
+            }
+        }
+        display(newData)
+    }
 
     // console.log(newData);
-
-    localStorage.setItem("user-data", JSON.stringify(newData));
 })
 
+//Filter by type
+document.querySelector("#filterByType").addEventListener("change", (e) => {
 
-let edit = document.querySelector("#edit-link");
-let editData = document.querySelector("#edit-data");
 
-let nameInp = document.querySelector("#name-inp");
-nameInp.value = currentUser[0].name;
-let locationInp = document.querySelector("#location-inp");
-locationInp.value = "India";
+    // console.log(e.target.value)
 
-edit.addEventListener("click", (e) => {
-    e.preventDefault();
+    let str = e.target.value;
 
-    editData.style.display = "block";
-    edit.style.fontWeight = "Bold";
-    edit.style.color = "black";
-    generalData.style.display = "none";
-    general.style.fontWeight = "lighter";
-    general.style.color = "#868686"
-    pwdData.style.display = "none";
-    pwd.style.fontWeight = "lighter";
-    pwd.style.color = "#868686";
+    if(str === "") {
+        display(userData);
+    }
+    else {
+        let newData = userData.filter((ele) => {
+            if(ele.type === str) {
+                return ele;
+            }
+        })
 
-    option.innerText = "Edit Profile";
-    optionMsg.innerText = "Set up your Dribbble presence and hiring needs"
+        // console.log(newData);
+        display(newData);
+    }
 })
 
-let pwd = document.querySelector("#pwd-link");
-let pwdData = document.querySelector("#pwd-data");
+//Display function
+function display(data) {
 
-pwd.addEventListener("click", (e) => {
+    // console.log(data);
+    tbody.innerHTML = "";
 
-    e.preventDefault();
+    for(let index = 0; index < data.length; index++) {
 
-    pwdData.style.display = "block";
-    pwd.style.fontWeight = "Bold";
-    pwd.style.color = "black";
-    generalData.style.display = "none";
-    general.style.fontWeight = "lighter";
-    general.style.color = "#868686"
-    editData.style.display = "none";
-    edit.style.fontWeight = "lighter";
-    edit.style.color = "#868686"
-    
+        let tr = document.createElement("tr");
+        let sl = document.createElement("td");
+        let name = document.createElement("td");
+        let username = document.createElement("td");
+        let email = document.createElement("td");
+        let type = document.createElement("td");
+        let removeBtn = document.createElement("td");
 
-    option.innerText = "Password";
-    optionMsg.innerText = "Manage your password"
-})
+        sl.innerText = index+1;
+        name.innerText = data[index].name;
+        username.innerText = data[index].username;
+        email.innerText = data[index].email;
+        type.innerText = data[index].type;
+        removeBtn.innerText = "Remove";
+
+        removeBtn.classList.add("deleteBtn");
+
+        removeBtn.addEventListener("click", () => {
+
+            let newData = data.filter((ele,i) => {
+                if(index !== i) {
+                    return ele;
+                }
+            })
+
+            console.log(newData);
+            
+            localStorage.setItem("user-data", JSON.stringify(newData));
+            display(newData);
+            window.location.reload();
+        })
+
+        tr.append(sl,name,username,email,type,removeBtn);
+
+        tbody.append(tr);
+    }
+}
+
+display(userData);
