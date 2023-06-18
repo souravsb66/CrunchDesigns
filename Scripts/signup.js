@@ -43,7 +43,7 @@ submit.addEventListener("click", (e) => {
         console.log(nameLabel);
         setTimeout(()=> {
             nameLabel.innerText = text;
-        },3000);
+        },4000);
     }
     else {
         dataCount++;
@@ -67,7 +67,7 @@ submit.addEventListener("click", (e) => {
         console.log(usernameLabel)
         setTimeout(()=> {
             usernameLabel.innerText = text;
-        },3000);
+        },4000);
     }
     else {
         dataCount++;
@@ -91,7 +91,7 @@ submit.addEventListener("click", (e) => {
         console.log(emailLabel, errorImg)
         setTimeout(()=> {
             emailLabel.innerText = text;
-        },3000);
+        },4000);
     }
     else {
         dataCount++;
@@ -112,7 +112,7 @@ submit.addEventListener("click", (e) => {
         pwdLabel.append(errorImg);
         setTimeout(()=> {
             pwdLabel.innerText = text;
-        },3000);
+        },4000);
     }
     else {
         dataCount++;
@@ -122,7 +122,7 @@ submit.addEventListener("click", (e) => {
         errorMsg.style.display = "block";
         setTimeout(() => {
             errorMsg.style.display = "none";
-        },3000)
+        },4000)
     }
     else {
         dataCount++;
@@ -157,6 +157,6 @@ submit.addEventListener("click", (e) => {
 
         setTimeout(() => {
             document.location.reload();
-        },5000)
+        },4000)
     }
 })
