@@ -49,6 +49,35 @@
       <h2 id="login-msg">Log in to see profile page!</h2>
     </div>
     <main id="main">
+
+      <select name="" id="sortByName" class="admin-func">
+        <option value="">Sort By Name</option>
+        <option value="atoz">A to Z</option>
+        <option value="ztoa">Z to A</option>
+      </select>
+
+      <select name="" id="filterByType">
+        <option value="">Filter By Type</option>
+        <option value="admin">Admin</option>
+        <option value="user">User</option>
+        <option value="mod">Moderator</option>
+      </select>
+      <table id="userData-table">
+        <thead>
+          <tr>
+            <td>Sl No.</td>
+            <td>Name</td>
+            <td>Username</td>
+            <td>Email</td>
+            <!-- <td>Password</td> -->
+            <td>Type</td>
+            <td>Remove</td>
+            <!-- <td>Subscription</td> -->
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
     </main>
 
     <footer id="footer">

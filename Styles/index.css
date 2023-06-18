@@ -273,6 +273,107 @@ body {
     font-size: 22px;
     line-height: 28px;
 }
+
+#hasTech-div {
+    width: 90%;
+    margin: auto;
+    margin-top: 20vh;
+    border-top: 2px solid #e0e0e0;
+}
+#hasTech-logo {
+    position: relative;
+    margin-left: 40vw;
+    margin-top: -50px;
+    /* border: 1px solid black; */
+}
+#hasTech-logo img {
+    /* border: 1px solid black; */
+    padding: 10px;
+    border-radius: 50px;
+    background-color: white;
+    z-index: 10;
+}
+#hasTech-logo h3 {
+    margin-left: 10px;
+}
+
+#hasTech-links {
+    /* border: 1px solid black; */
+    width: 85vw;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+#hasTech-links a {
+    text-decoration: none;
+    color: #ea4c89;
+}
+
+#hasTech-card-div {
+    width: 85vw;
+    margin: auto;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 20vh;
+}
+.cards {
+    height: 200px;
+    /* border: 1px solid black; */
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.cards img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.cards > div {
+    visibility: hidden;
+    /* border: 1px solid black; */
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background-color: #999999;
+    border-radius: 0 0 10px 10px;
+    z-index: 10;
+    padding: 10px;
+    background: transparent;
+    background: rgba(0, 0, 0, 0.4);
+    /* opacity: 0.5; */
+    margin-top: -50px;
+}
+.cards > div  p {
+    /* border: 1px solid black; */
+    width: 60%;
+    height: 20px;
+    overflow: hidden;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+.cards:hover {
+    transform: scale(1.05);
+    transition: 0.2sec;
+}
+.cards:hover > div {
+    visibility: visible;
+}
+.cards > div > div {
+    /* border: 1px solid white; */
+    padding: 6px 10px;
+    color: #868686;
+    background-color: rgb(238, 238, 238);
+    border-radius: 5px;
+}
+
+
+
+
 #footer {
     display: flex;
     background-color: #fafafb;
