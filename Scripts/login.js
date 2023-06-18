@@ -30,7 +30,7 @@ submit.addEventListener("click", (e) => {
                 localStorage.setItem("isLoggedIn", true);
                 setTimeout(()=> {
                     window.location.replace("./index.html")
-                },2000)
+                },500)
             }
             else {
                 errorMsg.style.display = "block";

@@ -45,27 +45,81 @@
           <a href="">Work Preferences</a>
           <a href="">Settings</a>
         </div>
-        <button id="signout-btn">Sign Out</button>
+        <button id="signout-btn">Log Out</button>
       </div>
     </nav>
 
+    <div id="login-msg-div">
+      <h2 id="login-msg">Log in to see profile page!</h2>
+    </div>
     <main id="main">
       <div id="profile-header">
         <div id="profile-about">
-          <img src="" alt="">
+          <img src="https://cdn.dribbble.com/assets/avatar-default-e370af14535cdbf137637a27ee1a8e451253edc80be429050bc29d59b1f7cda0.gif" alt="">
           <div id="categories">
-            <span id="profile-name">Sourav</span> / <span id="category">General</span>
-            <p>Update your username and manage your account</p>
+            <span id="profile-header-name">Sourav</span> / <span id="profile-header-option">General</span>
+            <p id="option-msg">Update your username and manage your account</p>
           </div>
         </div>
-        <div id="pro">
-          <span>Go</span> <span>Pro</span>
-          <p>Get 3X more portolio free visits
-            1
-          </p>
-        </div>
+        <a href="https://dribbble.com/pro" id="pro-link" target="_blank">
+          <div id="pro">
+            <div>
+              <span>Go</span> <span>Pro</span>
+            </div>
+            <p>Get 3X more portolio views</p>
+          </div>
+        </a>
       </div>
 
+      <div id="profile-options">
+        <ul id="options-list">
+          <li><a href="#profile-data" id="profile-link">General</a></li>
+          <li><a href="#edit-data" id="edit-link">Edit Profile</a></li>
+          <li><a href="#pwd-data" id="pwd-link">Password</a></li>
+        </ul>
+      </div>
+
+      <div id="profile-data">
+        <div id="general-data">
+          <div>
+            <label for="username-inp">Username</label>
+            <input type="text" name="" id="username-inp">
+          </div>
+          <div>
+            <label for="email-inp">Email</label>
+            <input type="email" name="" id="email-inp">
+          </div>
+          <button class="save-btn">Save Changes</button>
+        </div>
+
+        <div id="edit-data"> 
+          <div>
+            <label for="name-inp">Name</label>
+            <input type="text" id="name-inp">
+          </div>
+          <div>
+            <label for="location-inp">Location</label>
+            <input type="text" id="location-inp">
+          </div>
+          <div>
+            <label for="bio-inp">Bio</label>
+            <textarea name="" id="bio-inp" cols="30" rows="10"></textarea>
+          </div>
+          <button class="save-btn">Save Changes</button>
+        </div>
+
+        <div id="pwd-data">
+          <div>
+            <label for="old-pwd-inp">Old Password</label>
+            <input type="password" id="old-pwd-inp">
+          </div>
+          <div>
+            <label for="new-pwd-inp">New Password</label>
+            <input type="password" name="" id="new-pwd-inp">
+          </div>
+          <button class="save-btn">Save Changes</button>
+        </div>
+      </div>
     </main>
 
     <footer id="footer">

@@ -142,6 +142,7 @@ body {
 }
 #signout-btn:hover {
     background-color: #ffba08;
+    cursor: pointer;
     /* color: white; */
 }
 #signout-btn:active {

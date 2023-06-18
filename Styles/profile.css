@@ -142,20 +142,212 @@ body {
 }
 #signout-btn:hover {
     background-color: #ffba08;
+    cursor: pointer;
     /* color: white; */
 }
 #signout-btn:active {
     transform: scale(0.95);
 }
-
+#login-msg-div {
+    /* visibility: hidden; */
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+#login-msg {
+    font-size: 30px;
+    color: #868686;
+}
 #main {
-    border: 1px solid black;
+    padding: 20px;
+    /* border: 1px solid black; */
     width: 80vw;
-    height: 70vh;
+    /* height: 70vh; */
     margin: auto;
     margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    /* grid-template-rows: 1fr 4fr; */
+    grid-template-areas: 
+    "about about"
+    "options data"
+    ;
+}
+#main > div {
+    /* border: 1px solid black; */
+    padding: 20px;
+}
+#profile-header {
+    grid-area: about;
+    display: flex;
+    justify-content: space-between;
+}
+#profile-about {
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+}
+#profile-about > img {
+    width: 60px;
+    border-radius: 50px;
+    margin: 0 20px 0 10px;
+}
+#profile-about span:first-child {
+    font-size: 22px;
+}
+#profile-about span:last-child {
+    font-size: 20px;
+}
+#option-msg {
+    margin-top: 5px;
+    font-size: 16px;
+    color: #868686;
+}
+#pro-link {
+    width: 25%;
+    text-decoration: none;
+}
+#pro {
+    /* border: 1px solid black; */
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 0 15px; */
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    border-radius: 5px;
+}
+#pro > div {
+    font-size: 16px;
+}
+#pro > div > span:first-child {
+    font-weight: bold;
+}
+#pro > div > span:last-child {
+    font-weight: bold;
+    color: #ea4c89;
+}
+#pro > P {
+    font-size: 14px;
+    color: #868686;
 }
 
+#pro:hover {
+    
+    background-image: linear-gradient(to right, #f07855 , #df4373);
+    color: white;
+}
+#pro:hover p {
+    color: white;
+}
+#pro:hover > div > span {
+    color: white;
+}
+
+#profile-options {
+    grid-area: options;
+}
+#profile-options * {
+    margin-bottom: 15px;
+}
+#profile-options a {
+    text-decoration: none;
+    /* color: black; */
+}
+#profile-options > ul {
+    list-style: none;
+}
+#profile-options > ul > li > a {
+    color: #868686;
+    font-size: 15px;
+    line-height: 24px;
+}
+#profile-options > ul > li > a:hover {
+    color: black;
+}
+#profile-options > ul > li:first-child a {
+    font-weight: bold;
+    color: #0d0c22;
+}
+
+
+#profile-data {
+    grid-area: data;
+}
+#profile-data > div {
+    margin-bottom: 30px;
+}
+#profile-data > div > div {
+    display: flex;
+    flex-direction: column;
+}
+#profile-data > div > div * {
+    margin-bottom: 15px;
+}
+#profile-data > div > div > input {
+    padding: 15px 10px;
+    border-radius: 8px;
+    border: 1px solid #cecece;
+    background-color: #ffffff;
+    transition: 0.3s;
+    outline: none;
+    /* width: 50%; */
+}
+#profile-data > div > div > input:hover {
+    cursor: text;
+    background-color: white;
+    box-shadow: rgba(95, 95, 95, 0.16) 0px 10px 36px 0px, rgba(31, 31, 31, 0.06) 0px 0px 0px 1px;
+}
+#profile-data > div > div > input:focus {
+    border: 1px solid rgb(163, 163, 163)
+}
+textarea {
+    padding: 15px 10px;
+    border-radius: 8px;
+    border: 1px solid #cecece;
+    background-color: #ffffff;
+    transition: 0.3s;
+    outline: none;
+}
+textarea:hover {
+    cursor: text;
+    background-color: white;
+    box-shadow: rgba(95, 95, 95, 0.16) 0px 10px 36px 0px, rgba(31, 31, 31, 0.06) 0px 0px 0px 1px;
+}
+textarea:focus {
+    border: 1px solid rgb(163, 163, 163)
+}
+.save-btn {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    color: white;
+    background-color: #f0316a;
+}
+.save-btn:hover {
+    background-color: #ea4c89;
+    cursor: pointer;
+}
+.save-btn:active {
+    transform: scale(0.98);
+}
+
+#edit-data {
+    display: none;
+}
+#pwd-data {
+    display: none;
+}
 
 #footer {
     display: flex;
