@@ -13,38 +13,65 @@ submit.addEventListener("click", (e) => {
     e.preventDefault();
     let enteredInput = input.value;
     let enteredPwd = password.value;
-    let res = userData.filter((ele) => {
+    let resIndex;
+    let res = userData.filter((ele,i) => {
         if(enteredInput === ele.username || enteredInput === ele.email) {
             
             // console.log(enteredInput)
             if(enteredPwd === ele.password) {
                 // console.log(enteredPwd);
-                errorDiv.innerHTML = "";
-    
-                let success = document.createElement("h2");
-                success.innerText = "Logged In Succesfully.";
-                success.style.color = "green"
-    
-                errorDiv.append(success);
-    
-                localStorage.setItem("isLoggedIn", true);
-                setTimeout(()=> {
-                    window.location.replace("./index.html")
-                },500)
+                resIndex = i;
+                return ele;
             }
-            else {
-                errorMsg.style.display = "block";
-                setTimeout(() => {
-                    errorMsg.style.display = "none";
-                },4000)
-            }
-        }
-        else {
-            errorMsg.style.display = "block";
-            setTimeout(() => {
-                errorMsg.style.display = "none";
-            },4000)
         }
     })
+
+    // console.log(res, resIndex);
+
+    if(res.length > 0) {
+        errorDiv.innerHTML = "";
+    
+        let success = document.createElement("h2");
+        success.innerText = "Logged In Succesfully.";
+        success.style.color = "green"
+
+        errorDiv.append(success);
+
+        localStorage.setItem("isLoggedIn", true);
+
+        let newData = userData[resIndex];
+        newData.loggedIn = "true";
+        userData[resIndex] = newData;
+
+        localStorage.setItem("user-data", JSON.stringify(userData));
+
+        if(newData.type === "user") {
+
+            // console.log(newData)
+            // console.log(newData.type)
+            // console.log(typeof newData.type)
+
+            setTimeout(()=> {
+                window.location.replace("./index.html")
+            },500)
+        }
+        else if(newData.type === "admin") {
+
+            // console.log(newData)
+            // console.log(newData.type)
+            // console.log(typeof newData.type)
+
+            setTimeout(()=> {
+                window.location.replace("./admin.html")
+            },500)
+        }
+
+    }
+    else {
+        errorMsg.style.display = "block";
+        setTimeout(() => {
+            errorMsg.style.display = "none";
+        },4000)
+    }
     form.reset()
 })

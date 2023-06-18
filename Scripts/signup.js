@@ -133,6 +133,7 @@ submit.addEventListener("click", (e) => {
             username: username.value,
             email: email.value,
             password: password.value,
+            type: "user"
         }
     
         userData.push(obj);
@@ -148,7 +149,7 @@ submit.addEventListener("click", (e) => {
         errorDiv.append(success);
         setTimeout(()=> {
             window.location.replace("./login.html")
-        },4000)
+        },2000)
     }
     else {
         // console.log(errorList);

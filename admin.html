@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Styles/admin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Crunch Designs</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <a href="./index.html">
+        <img
+          src="./Files/logo-no-background.png"
+          alt="Crunch Designs"
+          id="logo"
+        />
+      </a>
+      
+      <div id="nav-btn">
+        <a href="./login.html" target="_self"><div id="login-btn">Log in</div></a>
+        <a href="./signup.html" target="_self"><div id="signup-btn">Sign up</div></a>
+      </div>
+
+      <h1 id="admin-header">Admin Page</h1>
+
+      <div id="profile-div">
+        <span id="profile-name"></span>
+        <a href="./profile.html"><img src="https://cdn.dribbble.com/assets/avatar-default-e370af14535cdbf137637a27ee1a8e451253edc80be429050bc29d59b1f7cda0.gif" alt=""></a>
+      </div>
+
+      <div id="profile-hover-div">
+        <div id="profile-hover-name">
+          <a href="./profile.html"><img src="https://cdn.dribbble.com/assets/avatar-default-e370af14535cdbf137637a27ee1a8e451253edc80be429050bc29d59b1f7cda0.gif" alt=""></a>
+          <span id="profile-name-hover"></span>
+        </div>
+        <div id="profile-hover-settings">
+          <a href="">Work Preferences</a>
+          <a href="">Settings</a>
+        </div>
+        <button id="signout-btn">Log Out</button>
+      </div>
+    </nav>
+
+    <div id="login-msg-div">
+      <h2 id="login-msg">Log in to see profile page!</h2>
+    </div>
+    <main id="main">
+    </main>
+
+    <footer id="footer">
+      <div id="footer-bottom">
+        <div id="copyright">
+          <p><i class="fa fa-copyright" aria-hidden="true"></i> 2023 Dribbble. All rights reserved.</p>
+        </div>
+        <div id="crunched-designs">
+          <span id="crunch-number">0</span><span>designs crunched</span><img src="./Files/logo.png" alt="">
+        </div>
+      </div>
+    </footer>
+    <script src="./Scripts/admin.js"></script>
+  </body>
+</html>

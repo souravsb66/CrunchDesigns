@@ -28,11 +28,6 @@ if(logInStatus === "true") {
         }
     })
     // console.log(currentUser);
-
-    if(currentUser[0].type === "admin") {
-        document.querySelector("#admin-header").style.display = "block";
-        document.querySelector("#links").style.display = "none";
-    }
     
     let profileName = document.querySelector("#profile-name");
     profileName.innerText = currentUser[0].name;

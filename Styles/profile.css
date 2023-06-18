@@ -20,6 +20,22 @@ body {
     height: 50px;
     margin-left: 10px;
 }
+#admin-header {
+    padding: 10px 15px;
+    border-radius: 10px;
+    display: none;
+    text-decoration: none;
+    background-color: #48cae4;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#admin-header:hover {
+    transform: scale(1.02);
+}
+#admin-header:active {
+    transform: scale(0.98);
+}
+
 #navbar #links {
     /* border: 1px solid black; */
     width: 50%;
