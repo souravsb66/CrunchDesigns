@@ -8,6 +8,7 @@ body {
 }
 #navbar {
     /* border: 1px solid black; */
+    width: 100%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     padding: 20px;
     height: 90px;
@@ -102,22 +103,20 @@ body {
 }
 
 #profile-hover-div {
-    visibility: hidden;
+    /* visibility: hidden; */
     width: 300px;
     border-radius: 10px;
     /* height: 500px; */
-    margin-top: 50vh;
-    margin-left: 74vw;
+    margin-top: 25%;
+    margin-left: 70%;
     padding: 20px;
     position: absolute;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     flex-direction: column;
-    /* border: 1px solid black; */
-    /* transition: 1s; */
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-    /* margin-top: 500px; */
+    display: none;
 }
 #profile-hover-div > div {
     margin-bottom: 20px;
@@ -205,7 +204,7 @@ body {
     /* border: 1px solid black; */
     display: flex;
     justify-content: space-evenly;
-    width: 25%;
+    width: 30%;
 }
 #main-header-btn > div {
     /* border: 1px solid black; */
@@ -453,3 +452,9 @@ body {
     width: 30px;
     margin-left: 10px;
 }
+
+/* @media screen and (max-width: 10500px) and (min-width: 900px) {
+    #main-header-btn {
+        width: 30%;
+    }
+} */
