@@ -37,10 +37,10 @@ if(logInStatus === "true") {
     let signoutBtn = document.querySelector("#signout-btn");
     
     profileDiv.addEventListener("mouseenter", () => {
-        profileHover.style.visibility = "visible";
+        profileHover.style.display= "flex";
     })
     profileHover.addEventListener("mouseleave", () => {
-        profileHover.style.visibility = "hidden"
+        profileHover.style.display = "none"
     })
     
     signoutBtn.addEventListener("click", () => {

@@ -104,15 +104,17 @@ general.addEventListener("click", (e) => {
 generalSave.addEventListener("click", () => {
     
     let newData = userData;
-    
+    let res = newData[currentUserIndex];
     // console.log(newData)
 
     let username = usernameInp.value;
-    newData[0].username = username;
+    res.username = username;
 
+    
     let email = emailInp.value;
-    newData[0].email = email;
-
+    res.email = email;
+    
+    newData[currentUserIndex] = res;
     // console.log(newData);
 
     localStorage.setItem("user-data", JSON.stringify(newData));
