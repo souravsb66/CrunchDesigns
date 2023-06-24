@@ -147,6 +147,50 @@ body {
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
+#admin-btn-div {
+    padding: 10px;
+    border: 1px solid rgb(223, 223, 223);
+    border-radius: 10px;
+}
+#todo-error-msg {
+    margin-left: 320px;
+}
+.admin-btn {
+    padding: 12px 20px;
+    margin-right: 10px;
+    border-radius: 8px;
+    width: 120px;
+    /* margin-bottom: 20px; */
+    border: 1px solid rgb(202, 202, 202);
+    background-color: #adb5bd;
+    font-size: 15px;
+    /* font-weight: bold; */
+}
+.admin-btn:hover {
+    background-color: #5d8fc2;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.02);
+}
+.admin-btn:active {
+    transform: scale(0.98);
+}
+
+#todo-div {
+    border: 1px solid #cacaca;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    display: none;
+}
+
+#userData-div {
+    border: 1px solid #cacaca;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+}
 #sortByName {
     padding: 10px;
     margin: 10px 10px 20px 2px;
@@ -155,6 +199,7 @@ body {
     outline: black;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
 }
 #filterByType {
     padding: 10px;
@@ -164,6 +209,7 @@ body {
     outline: black;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
 }
 #userData-table {
     width: 100%;
@@ -190,6 +236,141 @@ body {
 .deleteBtn:active {
     transform: scale(0.95);
 }
+
+/* Todo Tab */
+#todo-main {
+    display: flex;
+}
+#side-nav {
+    position: relative;
+    padding: 15px;
+    width: 250px;
+    height: 250px;
+    margin: 10px 20px 0 10px;
+    display: flex;
+    border-radius: 10px;
+    border: 1px solid rgb(168, 166, 166);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;    
+    flex-direction: column;
+
+    /* border: 1px solid black; */
+}
+#side-nav > button {
+    padding: 5px;
+    border: 1px solid rgb(168, 166, 166);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;    
+    font-size: 16px;
+    margin: 10px;
+}
+#side-nav > button:active {
+    transform: scale(0.95);
+}
+#pending-btn {
+    background-color: rgb(218, 231, 30);
+}
+#completed-btn {
+    background-color: rgb(58, 235, 58);
+}
+#deleted-btn {
+    background-color: #fd1d1d;
+    color: white;
+}
+#container {
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    /* margin-left: 250px; */
+    border-radius: 10px;
+    padding: 30px;
+    /* height: 500px; */
+    border: 1px solid rgb(167, 166, 166);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.card {
+    border: 1px solid gray;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    padding: 15px;
+    min-height: 150px;
+    border-radius: 7px;
+    /* height: 100px; */
+
+    display: grid;
+
+    grid-template-columns: 9fr 1fr;
+    gap: 10px;
+    grid-template-areas: 
+    "title search"
+    "button delete"
+    ;
+}
+.card:hover {
+    transform: scale(1.02);
+}
+.card > p {
+    font-size: 18px;
+    height: 80px;
+    grid-area: title;
+    /* display: inline; */
+    overflow: hidden;
+}
+.card > button {
+    border: 1px solid black;
+    grid-area: button;
+    height: 35px;
+    width: 50%;
+    border-radius: 5px;
+}
+.card > button:active {
+    transform: scale(0.95);
+}
+.status {
+    font-size: 20px;
+    margin-left: 10px;
+}
+.recycle {
+    grid-area: delete;
+    border: 1px solid rgb(59, 59, 59);
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    /* color: rgb(196, 196, 196); */
+    color: #e94040;
+    font-size: 20px;
+    /* font-weight: bold; */
+}
+.recycle:hover {
+    color: #ff0000;
+}
+.done {
+    background-color: rgb(58, 235, 58);
+}
+.pending {
+    background-color: rgb(218, 231, 30);
+}
+.deleted {
+    background-color: rgb(240, 36, 36);
+}
+.count {
+    font-size: 14px;
+}
+
+@media screen and (max-width: 1020px) and (min-width: 721px) {
+    #header {
+        width: 30%;
+    }
+    #side-nav {
+        width: 30%;
+    }
+    #container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
 
 #footer {
     display: flex;

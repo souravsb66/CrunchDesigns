@@ -49,35 +49,55 @@
       <h2 id="login-msg">Log in to see profile page!</h2>
     </div>
     <main id="main">
+      <div id="admin-btn-div">
+        <button id="userData-btn" class="admin-btn">User Data</button>
+        <button id="todo-btn" class="admin-btn">Todo</button>
 
-      <select name="" id="sortByName" class="admin-func">
-        <option value="">Sort By Name</option>
-        <option value="atoz">A to Z</option>
-        <option value="ztoa">Z to A</option>
-      </select>
+        <span id="todo-error-msg"></span>
+      </div>
 
-      <select name="" id="filterByType">
-        <option value="">Filter By Type</option>
-        <option value="admin">Admin</option>
-        <option value="user">User</option>
-        <option value="mod">Moderator</option>
-      </select>
-      <table id="userData-table">
-        <thead>
-          <tr>
-            <td>Sl No.</td>
-            <td>Name</td>
-            <td>Username</td>
-            <td>Email</td>
-            <!-- <td>Password</td> -->
-            <td>Type</td>
-            <td>Remove</td>
-            <!-- <td>Subscription</td> -->
-          </tr>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
+      <div id="todo-div">
+        <main id="todo-main">
+          <nav id="side-nav">
+              <button id="all-btn" class="nav-btn">All (<span id="all-count" class="count"></span>)</button>
+              <button id="pending-btn" class="nav-btn">Pending (<span id="pending-count" class="count"></span>)</button>
+              <button id="completed-btn" class="nav-btn">Completed (<span id="completed-count" class="count"></span>)</button>
+              <button id="deleted-btn" class="nav-btn">Deleted (<span id="deleted-count" class="count"></span>)</button>
+          </nav>
+          <div id="container"></div>
+        </main>
+      </div>
+
+      <div id="userData-div">
+        <select name="" id="sortByName" class="admin-func">
+          <option value="">Sort By Name</option>
+          <option value="atoz">A to Z</option>
+          <option value="ztoa">Z to A</option>
+        </select>
+  
+        <select name="" id="filterByType">
+          <option value="">Filter By Type</option>
+          <option value="admin">Admin</option>
+          <option value="user">User</option>
+          <option value="mod">Moderator</option>
+        </select>
+        <table id="userData-table">
+          <thead>
+            <tr>
+              <td>Sl No.</td>
+              <td>Name</td>
+              <td>Username</td>
+              <td>Email</td>
+              <!-- <td>Password</td> -->
+              <td>Type</td>
+              <td>Remove</td>
+              <!-- <td>Subscription</td> -->
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
     </main>
 
     <footer id="footer">
