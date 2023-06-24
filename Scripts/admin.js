@@ -213,17 +213,17 @@ let todoData = JSON.parse(localStorage.getItem("todo-data")) || [];
 
 let deletedTodoData = JSON.parse(localStorage.getItem("deleted-todo")) || [];
 
-// const API = fetch("https://jsonplaceholder.typicode.com/todos");
-// API.then((res) => {
-//     return res.json();
-// })
-// .then((fetchedData) => {
-//     display2(fetchedData);
-//     localStorage.setItem("todo-data", JSON.stringify(fetchedData));
-// })
-// .catch((err) => {
-//     console.log(err);
-// })
+const API = fetch("https://jsonplaceholder.typicode.com/todos");
+API.then((res) => {
+    return res.json();
+})
+.then((fetchedData) => {
+    display2(fetchedData);
+    localStorage.setItem("todo-data", JSON.stringify(fetchedData));
+})
+.catch((err) => {
+    console.log(err);
+})
 
 allBtn.addEventListener("click", () => {
 
