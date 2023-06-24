@@ -26,6 +26,11 @@
     color: #866118;
     font-size: 30px;
 }
+#image-sc {
+    display: none;
+    transition: 0.5s;
+
+}
 #right-div {
     width: 65%;
     margin-left: 35%;
@@ -84,6 +89,7 @@
     color: white;
     border-radius: 5px;
     width: 80%;
+    min-width: 250px;
     justify-content: space-between;
     /* border: 1px solid black; */
 
@@ -109,6 +115,7 @@
     color: #6e6d7a;
     padding: 11px;
     border-radius: 5px;
+    margin-left: 10px;
 }
 #tweet:hover {
     cursor: pointer;
@@ -213,4 +220,61 @@
     width: 20px;
     margin-left: 5px;
     margin-bottom: -3px;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 721px) { 
+    
+    #left-div {
+        display: none;
+    }
+    #right-div {
+        width: 100%;
+        align-items: center;
+        margin: 0;
+    }
+    #image-sc {
+        display: block;
+        width: 25%;
+        margin-bottom: 30px;
+    }
+    #signup-link {
+        position: absolute;
+        bottom: 0;
+    }
+    #login-div {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 720px) { 
+    #left-div {
+        display: none;
+    }
+    #right-div {
+        width: 100%;
+        align-items: center;
+        margin: 0;
+    }
+    #image-sc {
+        display: block;
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    #signup-link {
+        /* position: absolute; */
+        bottom: 0;
+    }
+    #login-div {
+        width: 85%;
+    }
+    #signup-form > div:first-child {
+        width: 100%;
+        flex-direction: column;
+    }
+    #signup-form > div:first-child input {
+        width: 100%;
+    }
+    #account-btn {
+        margin-left: 60px;
+    }
 }
