@@ -20,3 +20,4 @@ Functionalities Added -
   - Admins can sort users based on their names alphabetically
   - Admins can filter the type of users between user/admin/mod
   - Admins can remove users
+  - Admins have another tab where they keep track of all tasks
