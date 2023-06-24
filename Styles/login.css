@@ -16,20 +16,30 @@
     width: 35%;
     height: 100vh;
     background-color: #f1cdd7;
+    transition: 0.5s;
 }
 #left-div img {
     width: 200px;
     margin-bottom: 30px;
+    transition: 0.5s;
+
 }
 #left-div h1 {
     color: #865c6c;
     font-size: 30px;
+}
+#image-sc {
+    display: none;
+    transition: 0.5s;
+
 }
 #right-div {
     width: 65%;
     display: flex;
     flex-direction: column;
     padding: 10px;
+    transition: 0.5s;
+
     /* border: 1px solid black; */
 }
 #signup-link {
@@ -72,6 +82,7 @@
     color: white;
     border-radius: 5px;
     width: 80%;
+    min-width: 250px;
     justify-content: space-between;
     /* border: 1px solid black; */
 
@@ -97,6 +108,7 @@
     color: #6e6d7a;
     padding: 11px;
     border-radius: 5px;
+    margin-left: 10px;
 }
 #tweet:hover {
     cursor: pointer;
@@ -119,7 +131,7 @@
     border-radius: 5px;
     border: 1px solid #cecece;
     background-color: #f3f3f3;
-    transition: 0.3s;
+    transition: 0.5s;
     outline: none;
 }
 #login-form > input:hover {
@@ -165,4 +177,48 @@
     text-align: center;
     background-color: #ff5555;
     color: white;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 721px) { 
+    #left-div {
+        display: none;
+    }
+    #right-div {
+        width: 100%;
+        align-items: center;
+    }
+    #image-sc {
+        display: block;
+        width: 25%;
+        margin-bottom: 30px;
+    }
+    #signup-link {
+        position: absolute;
+        bottom: 0;
+    }
+    #login-div {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 720px) { 
+    #left-div {
+        display: none;
+    }
+    #right-div {
+        width: 100%;
+        align-items: center;
+    }
+    #image-sc {
+        display: block;
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    #signup-link {
+        position: absolute;
+        bottom: 0;
+    }
+    #login-div {
+        width: 85%;
+    }
 }

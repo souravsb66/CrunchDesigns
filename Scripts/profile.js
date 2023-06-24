@@ -39,6 +39,7 @@ if(logInStatus === "true") {
     
     let profileNameHover = document.querySelector("#profile-name-hover");
     profileNameHover.innerText = currentUser[0].name;
+
 }
 else {
     loginMsg.style.display = "flex"
@@ -118,6 +119,15 @@ generalSave.addEventListener("click", () => {
     // console.log(newData);
 
     localStorage.setItem("user-data", JSON.stringify(newData));
+
+    let saveMsg = document.querySelector("#sucess-message");
+    saveMsg.style.color = "red";
+    saveMsg.innerText = "Changes Saved";
+    
+    setTimeout(()=> {
+        saveMsg.innerHTML = "";
+    },2000)
+
 })
 
 
