@@ -275,6 +275,9 @@ completedBtn.addEventListener("click", () => {
 })
 
 deletedBtn.addEventListener("click", () => {
+
+    let deletedTodoData = JSON.parse(localStorage.getItem("deleted-todo")) || [];
+
     container.innerHTML = "";
     display2(deletedTodoData);
 })
