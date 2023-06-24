@@ -227,9 +227,9 @@ API.then((res) => {
 
 allBtn.addEventListener("click", () => {
 
-    let todoData = JSON.parse(localStorage.getItem("todo-data")) || [];
-    container.innerHTML = "";
-    display2(todoData);
+    let newData = JSON.parse(localStorage.getItem("todo-data")) || [];
+
+    display2(newData);
 })
 
 document.querySelector("#all-count").innerText = todoData.length;
@@ -250,35 +250,29 @@ deletedCount.innerText = deletedTodoData.length;
 
 pendingBtn.addEventListener("click", () => {
 
-    let todoData = JSON.parse(localStorage.getItem("todo-data")) || [];
+    let newData = JSON.parse(localStorage.getItem("todo-data")) || [];
 
-    let filteredData = todoData.filter((ele) => {
+    let filteredData = newData.filter((ele) => {
         if(ele.completed === false) {
             return ele;
         }
     })
-    container.innerHTML = "";
     display2(filteredData);
 })
 
 completedBtn.addEventListener("click", () => {
 
-    let todoData = JSON.parse(localStorage.getItem("todo-data")) || [];
+    let newData = JSON.parse(localStorage.getItem("todo-data")) || [];
 
-    let filteredData = todoData.filter((ele) => {
+    let filteredData = newData.filter((ele) => {
         if(ele.completed === true) {
             return ele;
         }
     })
-    container.innerHTML = "";
     display2(filteredData);
 })
 
 deletedBtn.addEventListener("click", () => {
-
-    let deletedTodoData = JSON.parse(localStorage.getItem("deleted-todo")) || [];
-
-    container.innerHTML = "";
     display2(deletedTodoData);
 })
 
@@ -340,7 +334,6 @@ function display2(data) {
                 })
                 
                 data[index].deleted = true;
-                delete data[index].completed;
                 
                 deletedTodoData.push(data[index]);
                 localStorage.setItem("deleted-todo", JSON.stringify(deletedTodoData));
@@ -392,9 +385,9 @@ function display2(data) {
 
         if(data[index].deleted === true) {
             div.classList.add("deleted");
-            div.removeChild(deleteDiv);
         }
 
+        console.log(div);
         container.append(div)
     }
 }
