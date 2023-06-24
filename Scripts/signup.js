@@ -133,7 +133,7 @@ submit.addEventListener("click", (e) => {
             username: username.value,
             email: email.value,
             password: password.value,
-            type: "user"
+            type: "mod"
         }
     
         userData.push(obj);
