@@ -1,7 +1,12 @@
 Crunch Designs
 Deployed link - https://crunch-designs.netlify.app/
 
-Replicating a page from the popular design template website Dribble, using HTML, CSS, and JavaScript.
+Replicating a page from the popular design template website Dribble
+
+Tech Stack used :-
+- HTML
+- CSS
+- JavaScript.
 
 Functionalities Added - 
 - Log In / Sign Up
