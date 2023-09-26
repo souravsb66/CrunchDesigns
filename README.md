@@ -1,6 +1,6 @@
 Crunch Designs  
 
-Deployed url - https://crunch-designs.netlify.app/
+Deployed [URL](https://crunch-designs.netlify.app/)
 
 Replicating a page from the popular design template website Dribble
 
