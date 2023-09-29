@@ -47,7 +47,7 @@ submit.addEventListener("click", (e) => {
 
 
         setTimeout(()=> {
-            window.location.replace("./index.html");
+            window.location.replace("../index.html");
         },500)
 
         // if(newData.type === "user") {
