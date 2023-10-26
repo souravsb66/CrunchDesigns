@@ -1,10 +1,10 @@
 Crunch Designs  
 
-Deployed Link : https://crunch-designs.netlify.app/
+Deployed Link: https://crunch-designs.netlify.app/
 
 Replicating a page from the popular design template website Dribble
 
-Tech Stack used :-
+Tech Stack used:-
 - HTML
 - CSS
 - JavaScript.
@@ -27,3 +27,18 @@ Functionalities Added -
   - Admins can filter the type of users between user/admin/mod
   - Admins can remove users
   - Admins have another tab where they keep track of all tasks
+
+Screenshots -  
+
+Home Page
+![Home Page1](./Files/HomePage1.png)
+![Home Page2](./Files/HomePage2.png)  
+
+Signup Page
+![Signup Page](./Files/SignupPage.png)  
+
+Login Page
+![Login Page](./Files/LoginPage.png)  
+
+Profile Page  
+![Profile Page](./Files/ProfilePage.png)
