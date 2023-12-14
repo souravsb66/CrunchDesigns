@@ -28,7 +28,7 @@ Functionalities Added -
   - Admins can remove users
   - Admins have another tab where they keep track of all tasks
 
-Screenshots -  
+Screens -  
 
 Home Page
 ![Home Page1](./Files/HomePage1.png)
